@@ -705,11 +705,12 @@ public class MainScene extends Scene {
 			return;
 
 		FileHandle[] files = appDir.list();
-		Arrays.sort(files, (f1, f2) -> f1.extension().compareTo(f2.extension()));
+		Arrays.sort(files, (f1, f2) -> f1.nameWithoutExtension().compareTo(f2.nameWithoutExtension()));
 
 		gameFiles.put("...", null);
 		for (FileHandle fh : files) {
-			gameFiles.put(fh.name(), fh);
+			if (fh.isDirectory())
+				gameFiles.put(fh.name(), fh);
 		}
 
 		fileList.setItems(gameFiles.keys().toArray());

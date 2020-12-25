@@ -10,7 +10,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.3'
+        classpath 'com.android.tools.build:gradle:4.0.0'
         
 
     }
@@ -19,7 +19,7 @@ buildscript {
 allprojects {
     apply plugin: "eclipse"
 
-    version = '1.0'
+    version = '1.1.0'
     ext {
         appName = "mingdx-setup"
         gdxVersion = '1.9.12'
@@ -72,6 +72,6 @@ project(":core") {
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
 
-        api 'com.isoterik.mgdx:mingdx:1.0.0'
+        api 'com.isoterik.mgdx:mingdx:1.1.0'
     }
 }

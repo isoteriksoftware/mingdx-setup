@@ -10,6 +10,9 @@ public class MinGdxSetup extends MinGdxGame
 	@Override
 	protected Scene initGame()
 	{
+		minGdx.defaultSettings.VIEWPORT_WIDTH = Constants.GUI_WIDTH;
+		minGdx.defaultSettings.VIEWPORT_HEIGHT = Constants.GUI_HEIGHT;
+		
 		minGdx.assets.enqueueSkin(Constants.SKIN_PATH);
 		minGdx.assets.loadAssetsNow();
 
